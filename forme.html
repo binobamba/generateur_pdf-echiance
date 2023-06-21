@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>INSCRIPTIONS</title>
+        <link href="Css/bootstrap.css" rel="stylesheet" > 
+        <link href="Css/style.css" rel="stylesheet" > 
+        <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xpwmVnOh9Ae0gHZbcATUPPTCZfOp0RMf7g7ZlZsXf1ztdQdRvzrjvjusEYBC1J2sFvlQIfrpTMkx6vGmFB8ShQ==" crossorigin="anonymous" />
+</head>
+<body class="bg-light">
+    <div class="container col-8  bg-white shadow shadow-md p-4">
+               
+            <div class="container row justify-content-center  mb-4   ">
+              <div class="col-md-1 justify-content-center text-center "> <img src="images/logo.png" alt="" style="width:150px; "> </div>
+              <div class="col-md-11 justify-content-center text-center py-4 mb-0"> <h3> <strong class="border border-2 border-warning mb-0 "> FICHE D’ECHEANCIER CLIENT</strong></h3></div>
+            </div>
+        <form class="text-center py-5"  action="generateur-pdf.php" method="post">
+
+       
+
+            <div class="row g-3 ">
+
+            <div class="col">
+                <div class="input-group mb-3">
+                    <label for="nom" class="input-group-text bg-white">NOM :</label>
+                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Saisir votre nom">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="input-group mb-3">
+                    <label for="prenom" class="input-group-text bg-white">PRENOM :</label>
+                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Saisir votre prénom">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="input-group mb-3">
+                    <label for="type" class="input-group-text bg-white">TYPE :</label>
+                    <input type="text" id="type" name="type" class="form-control" placeholder="Saisir le type">
+                </div>
+            </div>
+
+            </div>
+
+
+            <div class="row g-3 ">
+
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <label for="telephone" class="input-group-text bg-white">TELEPHONE :</label>
+                        <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Saisir numero mobile">
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <label for="email" class="input-group-text bg-white">E-MAIL</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Saisir email">
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <label for="code" class="input-group-text bg-white">CODE CLIENT : </label>
+                        <input type="text" id="code" name="code" class="form-control" placeholder="entrer le code client">
+                    </div>
+                </div>
+    
+                </div>
+
+
+
+
+                <div class="row g-2 ">
+
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <label for="superficie_1" class="input-group-text bg-white">SUPERFICIE :</label>
+                            <input type="tel" id="superficie_1" name="superficie_1" class="form-control" placeholder="Saisir la superficie">
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <label for="date" class="input-group-text bg-white">Date :</label>
+                            <input type="date" id="date" name="date" class="form-control" placeholder="Saisir la date">
+                        </div>
+                    </div>
+        
+        
+                </div>
+
+
+
+                <div class="row g-2 mb-5">
+
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <label for="telephone" class="input-group-text bg-white">TYPE DE BIEN :</label>
+                            <input type="tel" id="type_2"   name="type_2" class="form-control bg-warning text-white text-center fs-5" placeholder="Type de Bien">
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <label for="superficie_2" class="input-group-text bg-white">SUPERFICIE :</label>
+                            <input type="text" id="superficie_2" name="superficie_2" class="form-control bg-warning  text-white text-center fs-5" placeholder="Superficie">
+                        </div>
+                    </div>
+        
+                </div>
+
+
+
+
+      <table class="table border border-2 border-dark">
+        <thead class="table-success border border-2  border-dark text-center">
+          <tr>
+            <th scope="col">Montant du lot (FCFA)</th>
+            <th scope="col">Mt déjà versé (FCFA) </th>
+            <th scope="col">Reste à payer (FCFA) </th>
+            <th scope="col">Période de paiement</th>
+            <th scope="col">Montant à verser par mois (FCFA) </th>
+            <th scope="col">Date du prochain versement</th>
+            <th scope="col">Date limite de paiement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center justify-content-center">
+            <td><input type="number" id="mt_lot" name="mt_lot" class="form-control custom-input"></td>
+            <td><input type="number"  id="mt_versé" name="mt_versé" class="form-control custom-input"></td>
+            <td><input type="number"  id="rste_payer" name="rste_payer" class="form-control custom-input"></td>
+            <td><input type="text"    id="p_payement" name="p_payement" class="form-control custom-input"></td>
+            <td><input type="number"  id="mtnt_parMois" name="mtnt_parMois" class="form-control custom-input"></td>
+            <td><input type="date" id="date_pVersement" name="date_pVersement" class="form-control custom-input"></td>
+            <td><input type="date" id="date_limitePaiement" name="date_limitePaiement" class="form-control custom-input"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row  justify-content-center px-2 mt-5 mb-5">
+        <button type="submit" class="btn btn-primary col-8">Valider</button>
+      </div>
+    </form>
+
+    </div>
+    
+  </body> 
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</html>

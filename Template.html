@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>FICHE D’ECHEANCIER DE - {{nom}}</title>
+        <link href="Css/bootstrap.css" rel="stylesheet" > 
+        <link href="Css/style.css" rel="stylesheet" > 
+       </head>
+<body>
+
+    <div class="  justify-content-center py-0 my-0">
+                <img id="logo" class="mx-5" src="images/logo.png"  style="height:80px;">
+                <strong class="border border-2 border-warning fw-bold fs-3 p-3 mx-4 " > FICHE D’ECHEANCIER CLIENT</strong>
+        </div>
+  
+<hr class="my-5  mb-6">
+<img id="img" src="images/logo_back.png" alt="Description de l'image"  >
+                      <p class=" m-0 custom-min-width-2 mb-2 my-4  justify-content-lg-around" > <strong class="px-3">NOM  :</strong>  {{nom}}  <strong class="px-3">PRENOM(S) :</strong>  {{prenom}} <strong class="px-3">TYPE :</strong>  {{type}} </P>
+                   
+                      <p class=" m-0 custom-min-width-2 mb-2 my-4 justify-content-lg-around" > <strong class="px-2">TELEPHONE  :</strong>  {{telephone}}  <strong class="px-2">E-MAIL :</strong>  {{email}} <strong class="px-2">CODE CLIENT  :</strong>  {{code}} </P>
+                  
+                      <p class=" m-0 custom-min-width-2 mb-2 my-4 justify-content-lg-around" > <strong class="px-2">Date :  </strong>  {{date}}  <strong class="a_gauche">SUPERFICIE :</strong>  {{superficie_1}}  </P>
+                       
+                      <p class=" m-0 custom-min-width-2 mb-5 my-4 justify-content-lg-around bg-warning  " > <strong class="px-2">TYPE DE BIEN :  </strong>  {{date}}  <strong class="a_gauche">SUP:</strong>  {{superficie_2}}  </P>
+                     
+                    
+                    
+  <div class="my-4 mb-4">
+
+
+                        <table >
+                                <tr class="text-center bg-success text-white">
+                                    <th>Montant du lot (FCFA)</th>
+                                    <th>Mt déjà versé</th>
+                                    <th>Reste à payer</th>
+                                    <th>Période de paiement</th>
+                                    <th>Montant à verser par mois</th>
+                                    <th>Date du prochain versement</th>
+                                    <th>Date limite de paiement</th>
+                                </tr>
+                                <tr class="my-2 ">
+                                    <td><strong>{{mt_lot}}</strong></td>
+                                    <td><strong>{{mt_verse}}</strong></td>
+                                    <td><strong>{{rste_payer}}</strong></td>
+                                    <td><strong>{{p_payement}}</strong></td>
+                                    <td><strong>{{mtnt_parMois}}</strong></td>
+                                    <td><strong>{{date_pVersement}}</strong></td>
+                                    <td><strong>{{date_limitePaiement}}</strong></td>
+                                </tr>
+                                
+                            </table>
+    </div>
+
+  <p class="  mb-5 my-6 " style="margin-top: 110px;">  <u>Suivi par : BEREKIA IMMOBILIER  </u>    <u style="margin-left: 330px;">Signature du client</u>  </P>
+ <p class="  mb-5 my-6 " style="margin-top:5px;">    <em style="margin-left: 570px;"> mr :{{nom}}</em>  </P>
+
+        <footer class="mb-0">
+                <p>
+                BEREKIA IMMOBILIER au capital de 5.000.000 frs COCODY RIVIERA PALMERAIE NON LOIN DE LA PHARMACIE DE LA PALMERAIE<br>
+                Immeuble Keita Saran 1er étage appt 02 – RCCM :CI-ABJ-03-2022-B13-11870 - N°CC :1854687U – berekia.info777@gmail.com www.berekiaci.com<br>
+                NSIA: 67213602201 06 GTBANK :000000234977 28- 08 BP3625 ABJ 08 - Tel :(+225) 2721337233 - (+225) 0709133188 - (+225) 0150466589 – 0150466588
+                </p> 
+        </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+
+  body{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  th, td {
+    border: 1px solid rgb(0, 0, 0);
+
+  }
+
+  td{
+    text-align: center;
+    height:200px;
+  }
+ 
+#logo{
+ z-index: 1;
+ margin-top:5px;
+margin-bottom: -30px;
+}
+
+.a_gauche{
+  
+  margin-left: 250px;
+}
+  
+  
+footer{
+  margin-top:110px;
+   background-color: #f2f2f2;
+            padding: 1px;
+            text-align: center;
+            font-size: 10.5px;
+}
+
+#img {
+  position: absolute;
+  height: fit-content;
+  margin-top:8%;
+  opacity: 0.2; /* Opacité de l'image, valeur entre 0 et 1 */
+}
